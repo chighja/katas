@@ -1,0 +1,14 @@
+function digital_root(n) {
+    let z = n.toString(),
+        i,
+        y = 0;
+
+    if (z.length === 1) {
+        return +z;
+    }
+    
+    for (i = 0; i < z.length; i++) {
+        y += +z[i];
+    }
+    return digital_root(y);
+}
